@@ -1,0 +1,30 @@
+/*
+<DxDataGrid
+  id="dataGrid"
+  :data-source="users" // Массив пользователей 
+  key-expr="EmployeeID" // Уникальный ключ 
+  :allow-column-reordering="true" // Возможность менять позицию столбцов пользователем
+  :column-auto-width="true" // Автоматическое выравнивание широты для столбцов, так-же можер для колонок использовать атрибут `:width="100"` 
+>
+      <DxColumn data-field="FullName" :fixed="true"></DxColumn>
+      <DxColumn data-field="Position"></DxColumn>
+      <DxColumn data-field="BirthDate" data-type="date" // Атрибут, для форматирования даты :width="100" // Атрибут, для фиксирования широты>
+      </DxColumn>
+      <DxColumn data-field="HireDate" data-type="date" // Атрибут, для форматирования даты :width="100" // Атрибут, для фиксирования широты>
+      </DxColumn>
+      <DxColumn data-field="City" />
+      <DxColumn data-field="Country" :group-index="0" // Атрибут разбивает на слои ></DxColumn>
+      <DxColumn data-field="Address" />
+      <DxColumn data-field="HomePhone" />
+      <DxColumn data-field="PostalCode" :visible="false" // Атрибут, скрытия столбца />
+      <DxColumnChooser :enabled="true" />
+      <DxFilterRow :visible="true" />
+      <DxSearchPanel :visible="true" /> // Поиск данных
+      <DxEditing
+        mode="popup" // Модальное окно для редактирования
+        :allow-updating="true" // Атрибут включения изменения
+        :allow-adding="true" // Атрибут для добавление пользователей
+        :allow-deleting="true" // Атрибут удаления
+      />
+    </DxDataGrid>
+*/
