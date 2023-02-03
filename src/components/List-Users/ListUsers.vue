@@ -6,6 +6,7 @@
       key-expr="EmployeeID"
       :allow-column-reordering="true"
       :column-auto-width="true"
+      @selection-changed="selectEmployee"
     >
       <dx-column data-field="FullName" :fixed="true">
         <dx-required-rule />
@@ -34,10 +35,15 @@
       <dx-column data-field="HomePhone" />
 
       <dx-column data-field="PostalCode" :visible="false" />
+
       <dx-column-chooser :enabled="true" />
+
       <dx-filter-row :visible="true" />
+
       <dx-search-panel :visible="true" />
+
       <dx-group-panel :visible="true" />
+
       <dx-editing
         mode="popup"
         :allow-updating="true"
@@ -45,6 +51,10 @@
         :allow-deleting="true"
       />
     </dx-data-grid>
+
+    <p id="selected-employee" v-if="selectedEmployee">
+      Selected employee: {{ selectedEmployee.FullName }}
+    </p>
   </div>
 </template>
 
@@ -59,6 +69,7 @@ import {
   DxGroupPanel,
   DxRequiredRule,
   DxEditing,
+  DxSelection,
 } from "devextreme-vue/data-grid";
 import responce from "../../../responce";
 
@@ -73,10 +84,12 @@ export default {
     DxGroupPanel,
     DxRequiredRule,
     DxEditing,
+    DxSelection,
   },
   data() {
     return {
       users: null,
+      selectedEmployee: null,
       items: [
         {
           id: "30202",
@@ -166,8 +179,26 @@ export default {
       }
       return proof;
     },
+    selectEmployee(e) {
+      e.component.byKey(e.currentSelectedRowKeys[0]).done((employee) => {
+        if (employee) {
+          this.selectedEmployee = employee;
+        }
+      });
+    },
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#list__users__container {
+  padding: 30px;
+  position: relative;
+}
+
+#selected-employee {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+</style>

@@ -1,9 +1,9 @@
 <template>
   <header>
     <nav class="navigate">
-      <div class="list__users">
-        <div>Пользователи</div>
+      <div class="btns">
         <DxButton text="Users" />
+        <DxButton text="Countries" />
       </div>
     </nav>
   </header>
@@ -21,11 +21,12 @@ export default {
 <style lang="scss" scoped>
 .navigate {
   padding: 30px;
+  display: flex;
+  justify-content: center;
 }
-.list__users {
+.btns {
+  width: 400px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 170px;
 }
 </style>
