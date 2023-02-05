@@ -74,6 +74,7 @@ import {
 import responce from "../../../responce";
 
 export default {
+  name: "v-list-users",
   components: {
     DxDataGrid,
     DxColumn,
@@ -190,7 +191,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #list__users__container {
   padding: 30px;
   position: relative;

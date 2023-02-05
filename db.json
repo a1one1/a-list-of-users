@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "image": "1.jpg",
+      "name": "Calvin Klein K8W3714N",
+      "price": 9750,
+      "article": "W1",
+      "available": true,
+      "category": "Мужские"
+    },
+    {
+      "image": "2.jpg",
+      "name": "Calvin Klein K9H216C6",
+      "price": 12750,
+      "article": "W2",
+      "available": true,
+      "category": "Мужские"
+    },
+    {
+      "image": "3.jpg",
+      "name": "Calvin Klein K8M271CN",
+      "price": 16800,
+      "article": "W3",
+      "available": false,
+      "category": "Мужские"
+    },
+    {
+      "image": "4.jpg",
+      "name": "Calvin Klein K3M23124",
+      "price": 10780,
+      "article": "W4",
+      "available": true,
+      "category": "Женские"
+    },
+    {
+      "image": "5.jpg",
+      "name": "Calvin Klein K9H215C6",
+      "price": 12900,
+      "article": "W5",
+      "available": false,
+      "category": "Мужские"
+    },
+    {
+      "image": "6.jpg",
+      "name": "Calvin Klein K2G2G4C1",
+      "price": 12680,
+      "article": "W6",
+      "available": true,
+      "category": "Мужские"
+    }
+  ]
+}
